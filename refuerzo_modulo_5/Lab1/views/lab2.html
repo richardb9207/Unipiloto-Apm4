@@ -1,0 +1,64 @@
+<body>
+	<div ng-controller="lab2Controller">
+		<ul>
+			<li ng-repeat="filter in angular_filters">{{ filter }}</li>
+		</ul>
+		<ul>
+			<label>Nombre
+				<input type="text" name="name" ng-model="name">
+			</label>
+			<label>
+				<input type="date" name="date" ng-model="date"
+				placeholder="yyyy-MM-dd" min="1992-01-01" max="2010-12-31" required/>
+			</label>
+			<label>
+				<input type="datetime-local" name="datetl" ng-model="datetl" 
+				placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
+			</label>
+			<label>
+				<input type="time" name="time" ng-model="time"
+				placeholder="HH:mm:ss" min="08:00:00" max="17:00:00" required />
+			</label>
+			<label>
+				<input type="week" name="week" ng-model="week"
+				placeholder="YYYY-W##" min="2012-W32"
+	           	max="2013-W52" required />
+			</label>
+			<label>
+				<input type="month" name="month" ng-model="month"
+				 placeholder="yyyy-MM" min="2010-01" max="2013-12" required />
+			</label>
+			<label>Edad 
+				<input type="number" name="number" ng-model="number"
+				min="0" max="99" required>
+			</label>
+			<label>Pagina de internet
+				<input type="url" name="url" ng-model="url">
+			</label>
+			<label>Email
+				<input type="email" name="email" ng-model="email">
+			</label>
+			<label>Genero
+				<input type="radio" name="radioH" ng-model="radio" value="masculino">
+				<input type="radio" name="radioM" ng-model="radio" value="Femenino">
+			</label>
+			<label>Acepta terminos?
+				<input type="checkbox" name="checkbox" ng-model="checkbox"
+				ng-true-value="'Si'" ng-false-value="'No'">
+			</label>
+		</ul>
+		<ul>
+			<p ng-bind="name"></p>
+			<p ng-bind="date"></p>
+			<p ng-bind="datetl"></p>
+			<p ng-bind="time"></p>
+			<p ng-bind="week"></p><p ng-bind="id"></p>
+			<p ng-bind="month"></p>
+			<p ng-bind="number"></p>
+			<p ng-bind="url"></p>
+			<p ng-bind="email"></p>
+			<p ng-bind="radio"></p>
+			<p ng-bind="checkbox"></p>
+		</ul>
+	</div>
+</body>
